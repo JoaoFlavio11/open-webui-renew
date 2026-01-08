@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { toast } from 'svelte-sonner';
+	// @ts-ignore
 	import { v4 as uuidv4 } from 'uuid';
 
 	import { goto } from '$app/navigation';
@@ -82,7 +83,7 @@
 
 	let showCreateFolderModal = false;
 
-	let pinnedModels = [];
+	let pinnedModels: string | any[] | undefined = [];
 
 	let showPinnedModels = false;
 	let showChannels = false;
@@ -91,7 +92,7 @@
 	let folders = {};
 	let folderRegistry = {};
 
-	let newFolderId = null;
+	let newFolderId: null = null;
 
 	$: if ($selectedFolder) {
 		initFolders();
@@ -105,7 +106,7 @@
 		const folderList = await getFolders(localStorage.token).catch((error) => {
 			return [];
 		});
-		_folders.set(folderList.sort((a, b) => b.updated_at - a.updated_at));
+		_folders.set(folderList.sort((a: { updated_at: number; }, b: { updated_at: number; }) => b.updated_at - a.updated_at));
 
 		folders = {};
 
@@ -134,7 +135,7 @@
 					: [folder.id];
 
 				// Sort the children by updated_at field
-				folders[folder.parent_id].childrenIds.sort((a, b) => {
+				folders[folder.parent_id].childrenIds.sort((a: string | number, b: string | number) => {
 					return folders[b].updated_at - folders[a].updated_at;
 				});
 			}

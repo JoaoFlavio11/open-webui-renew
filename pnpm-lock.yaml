@@ -329,6 +329,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.13
         version: 0.5.19(tailwindcss@4.1.18)
+      '@types/uuid':
+        specifier: ^11.0.0
+        version: 11.0.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.31.1
         version: 8.52.0(@typescript-eslint/parser@8.52.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
@@ -2047,6 +2050,10 @@ packages:
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
+
+  '@types/uuid@11.0.0':
+    resolution: {integrity: sha512-HVyk8nj2m+jcFRNazzqyVKiZezyhDKrGUA3jlEcg/nZ6Ms+qHwocba1Y/AaVaznJTAM9xpdFSh+ptbNrhOGvZA==}
+    deprecated: This is a stub types definition. uuid provides its own type definitions, so you do not need this installed.
 
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
@@ -6928,6 +6935,10 @@ snapshots:
     optional: true
 
   '@types/unist@3.0.3': {}
+
+  '@types/uuid@11.0.0':
+    dependencies:
+      uuid: 9.0.1
 
   '@types/yauzl@2.10.3':
     dependencies:
