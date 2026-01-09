@@ -8,20 +8,37 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				gray: {
-					50: 'var(--color-gray-50, #f9f9f9)',
-					100: 'var(--color-gray-100, #ececec)',
-					200: 'var(--color-gray-200, #e3e3e3)',
-					300: 'var(--color-gray-300, #cdcdcd)',
-					400: 'var(--color-gray-400, #b4b4b4)',
-					500: 'var(--color-gray-500, #9b9b9b)',
-					600: 'var(--color-gray-600, #676767)',
-					700: 'var(--color-gray-700, #4e4e4e)',
-					800: 'var(--color-gray-800, #333)',
-					850: 'var(--color-gray-850, #262626)',
-					900: 'var(--color-gray-900, #171717)',
-					950: 'var(--color-gray-950, #0d0d0d)'
-				}
+				primary: {
+          light: "#A8D0F0",   // azul claro (hover / bg)
+          DEFAULT: "#2E86C1", // azul principal
+          dark: "#1B4F72"     // azul profundo (header/hover)
+        },
+        gray: {
+          light: "#F5F6F7",   // bg claro
+          DEFAULT: "#D0D3D4", // cinza médio
+          dark: "#6E6F70",    // texto / bordas
+					850: "#1F2933",
+        },
+        success: {
+          light: "#A9DFBF",
+          DEFAULT: "#27AE60",
+          dark: "#1E8449"
+        },
+        danger: {
+          light: "#F5B7B1",
+          DEFAULT: "#CB4335",
+          dark: "#922B21"
+        },
+        info: {
+          light: "#AED6F1",
+          DEFAULT: "#5DADE2",
+          dark: "#2E86C1"
+        },
+        background: {
+          light: "#F9FAFB",
+          DEFAULT: "#F2F3F4",
+          dark: "#E5E7E9"
+        }
 			},
 			typography: {
 				DEFAULT: {
